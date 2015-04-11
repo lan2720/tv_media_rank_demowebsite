@@ -1,6 +1,8 @@
 import datetime
-from flask import url_for
 from demo import db
 
+class VarietyRank(db.Document):
+    date = db.DateTimeField(required = True)
+    rank = db.ListField(StringField, required = True)
+    
 
-class Post(db.Document):

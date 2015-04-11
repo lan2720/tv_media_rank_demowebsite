@@ -1,9 +1,9 @@
 from flask import Flask
-from flask.ext.mongoengine import MongoEngine
+from flask.ext.pymongo import PyMongo
 
 app = Flask(__name__)
-app.config["MONGODB_SETTINGS"] = {'DB': "my_tumble_log"}
-db = MongoEngine(app)
+mongo = PyMongo(app)
+app.config['MONGO_DBNAME'] = 'tv_media'
 
 if __name__ == '__main__':
     app.run()
