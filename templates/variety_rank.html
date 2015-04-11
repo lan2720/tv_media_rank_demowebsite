@@ -1,0 +1,11 @@
+<html>
+  <head>
+    <title>综艺热度榜</title>
+  </head>
+  <body>
+    <h1>综艺热度榜 - {% date %}</h1>
+    {% for variety in rank %}
+    <p>{% variety %}</p>
+    {% endfor %}
+  </body>
+</html>
