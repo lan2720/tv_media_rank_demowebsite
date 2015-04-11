@@ -7,6 +7,8 @@
     <ul>
     	{% for drama in rank %}
     	<li>{{ drama }}</li>
+    	{% else %}
+    	<h3>无当日数据</h3>
     	{% endfor %}
 	</ul>
   </body>
