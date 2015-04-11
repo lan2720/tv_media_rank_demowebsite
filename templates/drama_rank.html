@@ -1,0 +1,13 @@
+<html>
+  <head>
+    <title>电视剧热度榜</title>
+  </head>
+  <body>
+    <h1>电视剧热度榜 in {{ date }}</h1>
+    <ul>
+    	{% for drama in rank %}
+    	<li>{{ drama }}</li>
+    	{% endfor %}
+	</ul>
+  </body>
+</html>

@@ -3,9 +3,11 @@
     <title>综艺热度榜</title>
   </head>
   <body>
-    <h1>综艺热度榜 - {% date %}</h1>
+    <h1>综艺热度榜 in {{ date }}</h1>
+    <ul>
     {% for variety in rank %}
-    <p>{% variety %}</p>
+    <li>{{ variety }}</li>
     {% endfor %}
+    </ul>
   </body>
 </html>
