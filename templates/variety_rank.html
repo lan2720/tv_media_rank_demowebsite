@@ -1,15 +1,25 @@
 <html>
   <head>
+    <meta charset="utf-8">
     <title>综艺热度榜</title>
+    <!-- This css style template copies from Xiao Jia (xiao-jia.com) -->
+    <link href="../static/css/theme.css" type="text/css" rel="stylesheet"/>
+    <link href="../static/css/rank.css" type="text/css" rel="stylesheet"/>
   </head>
   <body>
-    <h1>综艺热度榜 in {{ date }}</h1>
-    <ul>
-      {% for variety in rank %}
-      <li>{{ variety }}</li>
-      {% else %}
-      <h3>无当日数据</h3>
-      {% endfor %}
-    </ul>
+    <div class="box">
+      <div class="rank10 ranktree" style="margin: 0 auto;">
+        <div class="rh">
+          <h3>>> 综艺</h3>
+        </div>
+        <div class="rb">
+          <ul>
+            {% for variety in variety_rank %}
+            <li>{{ variety }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
