@@ -17,7 +17,7 @@ def rank():
 
 	variety = mongo.db.variety_rank.find_one({'date':date}, {'rank':1, '_id':0})
 	drama = mongo.db.drama_rank.find_one({'date':date}, {'rank':1, '_id':0})
-	tv = mongo.db.tv_rank.find_one({'date':date}, {'rank':1, '_id':0})
+	station = mongo.db.station_rank.find_one({'date':date}, {'rank':1, '_id':0})
 	if variety:
 		variety_rank = variety['rank']
 	else:
@@ -26,14 +26,14 @@ def rank():
 		drama_rank = drama['rank']
 	else:
 		drama_rank = []
-	if tv:
-		tv_rank = tv['rank']
+	if station:
+		station_rank = station['rank']
 	else:
-		tv_rank = []
+		station_rank = []
 
 	pre = (datetime.datetime.strptime(date,"%Y-%m-%d") + datetime.timedelta(days=-1)).strftime("%Y-%m-%d")
 	nextday = (datetime.datetime.strptime(date,"%Y-%m-%d") + datetime.timedelta(days=1)).strftime("%Y-%m-%d")
-	return render_template('rank.html', variety_rank = variety_rank, drama_rank = drama_rank, tv_rank = tv_rank, date = date, 
+	return render_template('rank.html', variety_rank = variety_rank, drama_rank = drama_rank, tv_rank = station_rank, date = date, 
 						istoday = istoday, pre = pre, next = nextday)
 
 @app.route('/rank/drama', methods = ['GET'])
@@ -55,6 +55,17 @@ def variety_rank_detail():
 	else:
 		variety_rank = []
 	return render_template('variety_rank.html', variety_rank = variety_rank)
+
+@app.route('/rank/tv', methods = ['GET'])
+def station_rank_detail():
+	date = request.args.get('date','')
+	station = mongo.db.station_rank.find_one({'date':date}, {'rank':1, '_id':0})
+	if station:
+		station_rank = station['rank']
+	else:
+		station_rank = []
+	return render_template('tv_rank.html', tv_rank = station_rank)
+
 
 @app.errorhandler(404)
 def page_not_found(e):

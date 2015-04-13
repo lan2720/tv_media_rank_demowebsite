@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>电视台热度榜</title>
+    <!-- This css style template copies from Xiao Jia (xiao-jia.com) -->
+    <link href="../static/css/theme.css" type="text/css" rel="stylesheet"/>
+    <link href="../static/css/rank.css" type="text/css" rel="stylesheet"/>
+  </head>
+  <body>
+    <div class="box">
+      <div class="rank10 ranktree" style="margin: 0 auto;">
+        <div class="rh">
+          <h3>>> 电视台</h3>
+        </div>
+        <div class="rb">
+          <ol>
+            {% for station in tv_rank %}
+            <li>{{ station }}</li>
+            {% endfor %}
+          </ol>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
