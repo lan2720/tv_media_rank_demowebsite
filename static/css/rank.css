@@ -1,13 +1,12 @@
 /*rank*/
-.ranktree li{height:24px;border-bottom:1px solid #e5e5e5;*margin-bottom:-3px;}
+.ranktree li{height:24px;border-bottom:1px solid #e5e5e5;overflow:hidden;*margin-bottom:-3px;}
 .ranktree li span,
 .ranktree li a{display:block;line-height:24px;padding-left:20px;}
 .ranktree li.current{background:#0078cb;}
 .ranktree li.current span,
 .ranktree li.current a{color:#fff;cursor:default;}
 
-
-.rank10coll{width:790px;}
+.rank10coll{width:790px;overflow:hidden;}
 .rank10coll .items{width:900px;}
 .rank10coll .rank10{float:left;margin-right:20px;margin-bottom:20px;}
 .rank10{width:246px;border:2px solid #e2ecf6;}
@@ -16,8 +15,7 @@
 .rank10 .rh h3 a{color:#000;}
 .rank10 .rh em{color:#909090;position:absolute;top:0;right:10px;line-height:26px;font-style:normal;}
 .rank10 .rf{padding-right:10px;height:30px;text-align:right;line-height:30px;}
-.rank10 li{height:30px;border-bottom:1px solid #ececec;*margin-bottom:-3px;}
-.rank10 .order{display:block;float:left;width:50px;padding-right:10px;line-height:30px;font-size:14px;text-align:right;}
+.rank10 li{overflow:hidden;height:30px;border-bottom:1px solid #ececec;*margin-bottom:-3px;}
+.rank10 .order{display:block;float:left;width:30px;padding-right:10px;line-height:30px;font-size:14px;text-align:right;}
 .rank10 .skey{display:block;float:left;width:114px;line-height:30px;font-size:14px;}
 .rank10 .stat{display:block;float:left;width:80px;line-height:30px;font-size:12px;text-align:right;}
-

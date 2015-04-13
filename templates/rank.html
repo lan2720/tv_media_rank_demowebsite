@@ -19,19 +19,21 @@
           <h3>>> 电视剧</h3>
         </div>
         <div class="rb">
-          <ul>
-            {% if drama_rank %}
-              {% for i in range(10) %}
-              <li>{{ drama_rank[i] }}</li>
-              {% endfor %}
+          {% if drama_rank %}
+          <ol>
+            {% for i in range(10) %}
+            <li>{{ drama_rank[i] }}</li>
+            {% endfor %}
+          </ol>
+          {% else %}
+          <ul style="list-style-type:none;">
+            {% if istoday %}
+            <li>今日排名稍后奉上</li>
             {% else %}
-              {% if istoday %}
-              <li>今日排名稍后奉上</li>
-              {% else %}
-              <li>无当日数据</li>
-              {% endif %}
+            <li>无当日数据</li>
             {% endif %}
           </ul>
+          {% endif %}
         </div>
         <div class="rf">
           {% if drama_rank %}
@@ -45,19 +47,21 @@
           <h3>>> 综艺</h3>
         </div>
         <div class="rb">
-          <ul>
-            {% if variety_rank %}
-              {% for i in range(10) %}
-              <li>{{ variety_rank[i] }}</li>
-              {% endfor %}
+          {% if variety_rank %}
+          <ol>
+            {% for i in range(10) %}
+            <li>{{ variety_rank[i] }}</li>
+            {% endfor %}
+          </ol>
+          {% else %}
+          <ul style="list-style-type:none;">
+            {% if istoday %}
+            <li>今日排名稍后奉上</li>
             {% else %}
-              {% if istoday %}
-              <li>今日排名稍后奉上</li>
-              {% else %}
-              <li>无当日数据</li>
-              {% endif %}
+            <li>无当日数据</li>
             {% endif %}
           </ul>
+          {% endif %}
         </div>
         <div class="rf">
           {% if variety_rank %}
@@ -71,19 +75,21 @@
           <h3>>> 电视台</h3>
         </div>
         <div class="rb">
-          <ul>
-            {% if tv_rank %}
-              {% for i in range(10) %}
-              <li>{{ tv_rank[i] }}</li>
-              {% endfor %}
+          {% if tv_rank %}
+          <ol>
+            {% for i in range(10) %}
+            <li>{{ tv_rank[i] }}</li>
+            {% endfor %}
+          </ol>
+          {% else %}
+          <ul style="list-style-type:none;">
+            {% if istoday %}
+            <li>今日排名稍后奉上</li>
             {% else %}
-              {% if istoday %}
-              <li>排名稍后奉上</li>
-              {% else %}
-              <li>无当日数据</li>
-              {% endif %}
+            <li>无当日数据</li>
             {% endif %}
           </ul>
+          {% endif %}
         </div>
         <div class="rf">
           {% if tv_rank %}
