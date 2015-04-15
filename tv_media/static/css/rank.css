@@ -1,0 +1,16 @@
+/*rank*/
+.ranktree li{height:24px;border-bottom:1px solid #e5e5e5;*margin-bottom:-3px;}
+.ranktree li span,
+.ranktree li a{display:block;line-height:24px;padding-left:20px;}
+.ranktree li.current{background:#0078cb;}
+.ranktree li.current span,
+.ranktree li.current a{color:#fff;cursor:default;}
+
+.rank10{width:246px;border:2px solid #e2ecf6;}
+.rank10 .rh{height:26px;background:#e7f0f8;position:relative;}
+.rank10 .rh h3{padding-left:12px;line-height:26px;}
+.rank10 .rh h3 a{color:#000;}
+.rank10 .rh em{color:#909090;position:absolute;top:0;right:10px;line-height:26px;font-style:normal;}
+.rank10 .rf{padding-right:10px;height:30px;text-align:right;line-height:30px;}
+.rank10 li{height:30px;border-bottom:1px solid #ececec;*margin-bottom:-3px;}
+.rank10 ol{padding-left: 60px;}
