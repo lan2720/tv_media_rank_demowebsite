@@ -11,7 +11,7 @@ manager = Manager(app)
 manager.add_command("runserver", Server(
     use_debugger = True,
     use_reloader = True,
-    host = 'localhost')
+    host = '202.120.38.146')
 )
 
 if __name__ == "__main__":
